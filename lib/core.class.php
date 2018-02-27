@@ -179,9 +179,9 @@ class Core
         }
 
         // On declare la fonction autoload
-        if (file_exists($this->_app_root.'/core/autoload.class.php'))
+        if (file_exists($this->_fw_root.'/lib/autoload.class.php'))
         {
-            include $this->_app_root . '/core/autoload.class.php';
+            include $this->_fw_root . '/lib/autoload.class.php';
             spl_autoload_register(array(__NAMESPACE__.'\Autoload','loader'));
             $this->_autoload_ready = true;
         }
